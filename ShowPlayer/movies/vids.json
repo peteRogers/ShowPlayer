@@ -2,24 +2,10 @@
 
 [
     
-    {
-        "name":"Alice Ferrante",
-        "title":"Irresponsible Utopia Videos",
-        "filename":"a_Ferrante.mp4"
-    },
+  
     {
         "name":"A Werres",
         "title":"No Title",
-        "filename":"AWerres.mp4"
-    },
-    {
-        "name":"Samina Rahman",
-        "title":"Sirens soliloquy",
-        "filename":"s_Rahman.mp4"
-    },
-    {
-        "name":"Bridget Mosiya",
-        "title":"Triangle",
-        "filename":"b_Mosiya.mp4"
+        "filename":"A_Werres.mp4"
     }
 ]

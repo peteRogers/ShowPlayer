@@ -77,7 +77,6 @@ struct ListView: View {
             List {
                 ForEach(Array(model.vids.enumerated()), id: \.1.id) { (index, item) in
                     HStack {
-                      
                         if(index == model.videoCount){
                             Text(item.name).font(.largeTitle).lineLimit(1).foregroundColor(.red)
                             Text(", ").font(.largeTitle).lineLimit(1).foregroundColor(.red)
@@ -88,11 +87,8 @@ struct ListView: View {
                             Text(", ").font(.largeTitle).lineLimit(1).foregroundColor(.black)
                             Text(item.title).font(.largeTitle).lineLimit(1).foregroundColor(.black)
                         }
-                        
                         Spacer()
                         Button(action: {
-                           
-                            print(index)
                             model.showList = false
                             model.videoCount = index
                             model.loadNext()
@@ -103,22 +99,15 @@ struct ListView: View {
                                 .foregroundStyle(.red)
                         }).buttonStyle(.plain)
                             .padding()
-                        //Spacer()
-                        
                     }
                     .padding()
                     .listRowBackground(Color.white)
                 }.background(.white)
                 
             }
-            
             Button(action: {
-               
-                print(index)
                 model.showList = false
                 model.player.play()
-               
-               
             },label: {
                 Image(systemName: "xmark.circle")
                     .font(Font.system(.largeTitle))
@@ -126,8 +115,10 @@ struct ListView: View {
             }).buttonStyle(.plain)
                 .padding(10)
             Spacer()
-            
-            
+        }.onAppear{
+            NSCursor.unhide()
+        }.onDisappear{
+            NSCursor.hide()
         }
     }
 }

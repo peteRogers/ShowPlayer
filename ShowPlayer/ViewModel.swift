@@ -26,6 +26,7 @@ class ViewModel: ObservableObject {
         loadNext()
         
         playItem()
+        NSCursor.hide()
         
     }
     
